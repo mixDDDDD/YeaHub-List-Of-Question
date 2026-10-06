@@ -1,0 +1,46 @@
+@import "./variables.css";
+@import "./fonts/fonts.css";
+
+html {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+body {
+  min-width: 1280px;
+  font-family: var(--font-family-primary);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
