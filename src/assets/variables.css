@@ -1,0 +1,43 @@
+:root {
+  /* ===== Purple — Primary ===== */
+  --color-purple-900: #400799;
+  --color-purple-600: #883cff;
+  --color-purple-300: #d2b6ff;
+  --color-purple-100: #f0e7ff;
+
+  /* ===== Red — Error ===== */
+  --color-red-900: #880727;
+  --color-red-700: #d50b3e;
+  --color-red-300: #f98ba6;
+
+  /* ===== Yellow — Warning ===== */
+  --color-yellow-900: #faaf00;
+  --color-yellow-600: #ffda85;
+
+  /* ===== Green — Success ===== */
+  --color-green-900: #17663a;
+  --color-green-600: #2dca72;
+
+  /* ===== Black ===== */
+  --color-black-900: #191919;
+  --color-black-500: #757575;
+  --color-black-25: #f4f4f4;
+
+  /* ===== White ===== */
+  --color-white-900: #ffffff;
+
+  /* ===== Семантические алиасы ===== */
+  --color-primary: var(--color-purple-600);
+  --color-primary-dark: var(--color-purple-900);
+  --color-primary-light: var(--color-purple-300);
+  --color-primary-extra-light: var(--color-purple-100);
+
+  --color-error: var(--color-red-700);
+  --color-warning: var(--color-yellow-900);
+  --color-success: var(--color-green-600);
+
+  --color-text-primary: var(--color-black-900);
+  --color-text-secondary: var(--color-black-500);
+  --color-background: var(--color-white-900);
+  --color-background-muted: var(--color-black-25);
+}
