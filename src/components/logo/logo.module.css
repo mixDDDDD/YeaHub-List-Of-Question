@@ -1,0 +1,17 @@
+.logoLink {
+  width: 172px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logoLink:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.logoLink:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--color-purple-700);
+  outline-offset: 4px;
+}

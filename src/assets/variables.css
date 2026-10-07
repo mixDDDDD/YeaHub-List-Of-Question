@@ -1,6 +1,8 @@
 :root {
   /* ===== Purple — Primary ===== */
   --color-purple-900: #400799;
+  --color-purple-800: #5509cc;
+  --color-purple-700: #6a0bff;
   --color-purple-600: #883cff;
   --color-purple-300: #d2b6ff;
   --color-purple-100: #f0e7ff;
@@ -21,6 +23,7 @@
   /* ===== Black ===== */
   --color-black-900: #191919;
   --color-black-500: #757575;
+  --color-black-100: #d1d1d1;
   --color-black-25: #f4f4f4;
 
   /* ===== White ===== */

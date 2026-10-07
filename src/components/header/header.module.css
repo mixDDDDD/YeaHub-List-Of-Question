@@ -1,0 +1,24 @@
+.header {
+  width: 1440px;
+  height: 64px;
+  padding: 8px 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white-900);
+}
+
+.brand-navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-wrapper {
+  width: 235px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 26px;
+}

@@ -1,0 +1,40 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link,
+.emphasized {
+  color: var(--color-black-900);
+  font-size: 16px;
+  line-height: 1.27;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.link {
+  font-weight: 400;
+}
+
+.emphasized {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.link:hover,
+.emphasized:hover {
+  color: var(--color-purple-700);
+}
+
+.link:focus-visible,
+.emphasized:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--color-purple-700);
+  outline-offset: 4px;
+}
