@@ -1,0 +1,109 @@
+.code-block {
+  position: relative;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.code-block__pre {
+  width: 100%;
+  margin: 0;
+  padding: 16px 56px 16px 16px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #252830;
+  color: var(--color-white-900);
+  white-space: pre;
+  font-style: normal;
+  tab-size: 4;
+}
+
+.code-block__pre code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-block__copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #4b4d53;
+  color: var(--color-white-900);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-block__copy:hover {
+  background: #62646a;
+}
+
+.code-block__copy:focus-visible {
+  outline: 2px solid var(--color-white-900);
+  outline-offset: 2px;
+}
+
+.code-block__copy-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.code-block__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.code-block__pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+}
+
+.code-block__pre :global(.hljs-comment) {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.code-block__pre :global(.hljs-tag),
+.code-block__pre :global(.hljs-keyword),
+.code-block__pre :global(.hljs-selector-tag),
+.code-block__pre :global(.hljs-name) {
+  color: #ff7b72;
+}
+
+.code-block__pre :global(.hljs-attr),
+.code-block__pre :global(.hljs-number),
+.code-block__pre :global(.hljs-attribute),
+.code-block__pre :global(.hljs-variable) {
+  color: #79c0ff;
+}
+
+.code-block__pre :global(.hljs-string) {
+  color: #a5d6ff;
+}
+
+.code-block__pre :global(.hljs-title),
+.code-block__pre :global(.hljs-built_in),
+.code-block__pre :global(.hljs-function),
+.code-block__pre :global(.hljs-subst),
+.code-block__pre :global(.hljs-selector-class),
+.code-block__pre :global(.hljs-selector-id) {
+  color: #d2a8ff;
+}
+
+.code-block__pre :global(.hljs-literal),
+.code-block__pre :global(.hljs-meta) {
+  color: #ffb86c;
+}

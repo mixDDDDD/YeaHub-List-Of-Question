@@ -1,11 +1,11 @@
-import { Header } from "./components/header/Header";
+import { Header } from "@/components/header/Header";
+import { QuestionsPage } from "@/components/questionsPage/QuestionsPage";
 
 function App() {
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <Header />
+      <QuestionsPage />
     </>
   );
 }

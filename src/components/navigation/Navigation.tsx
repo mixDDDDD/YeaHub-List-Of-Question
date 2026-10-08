@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import styles from "./navigation.module.css";
 
 const links = [
@@ -10,12 +11,16 @@ const links = [
 export const Navigation = () => {
   return (
     <nav className={styles.navigation} aria-label="Основная навигация">
-      <ul className={styles.list}>
+      <ul className={styles["navigation__list"]}>
         {links.map(({ label, href, emphasized }) => (
           <li key={href}>
             <a
-              className={emphasized ? styles.emphasized : styles.link}
+              className={clsx(
+                styles["navigation__link"],
+                emphasized && styles["navigation__link--active"],
+              )}
               href={href}
+              aria-current={emphasized ? "page" : undefined}
             >
               {label}
             </a>

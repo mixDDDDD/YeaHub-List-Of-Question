@@ -6,7 +6,6 @@ export type ButtonVariant = "primary" | "secondary";
 
 export type ButtonProps = {
   variant?: ButtonVariant;
-  destructive?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({
@@ -17,7 +16,7 @@ export const Button = ({
 }: ButtonProps) => (
   <button
     type={type}
-    className={clsx(styles.button, styles[variant], className)}
+    className={clsx(styles.button, styles[`button--${variant}`], className)}
     {...props}
   />
 );

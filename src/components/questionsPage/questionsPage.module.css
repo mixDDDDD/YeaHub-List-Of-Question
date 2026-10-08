@@ -1,0 +1,7 @@
+.questions-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 392px;
+  gap: 20px;
+  max-width: 1216px;
+  margin: 40px auto 0;
+}

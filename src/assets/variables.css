@@ -22,9 +22,13 @@
 
   /* ===== Black ===== */
   --color-black-900: #191919;
+  --color-black-800: #303030;
+  --color-black-700: #474747;
   --color-black-500: #757575;
   --color-black-100: #d1d1d1;
+  --color-black-50: #e8e8e8;
   --color-black-25: #f4f4f4;
+  --color-black-10: #f8f8f8;
 
   /* ===== White ===== */
   --color-white-900: #ffffff;

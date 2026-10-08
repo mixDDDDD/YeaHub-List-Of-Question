@@ -1,8 +1,20 @@
 import type { SVGProps } from "react";
-import { LogoIcon } from "@/components/icon/icons";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ChevronBottomIcon,
+  CopyIcon,
+  EllipseIcon,
+  LogoIcon,
+} from "@/components/icon/icons";
 
 const iconMap = {
   logo: LogoIcon,
+  chevronBottom: ChevronBottomIcon,
+  copy: CopyIcon,
+  ellipse: EllipseIcon,
+  arrowLeft: ArrowLeftIcon,
+  arrowRight: ArrowRightIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;
