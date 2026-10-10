@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 import {
-  ArrowLeftIcon,
+  ArrowLeftIconBtn,
+  ArrowRightIconBtn,
   ArrowRightIcon,
   ChevronBottomIcon,
   CopyIcon,
@@ -13,7 +14,8 @@ const iconMap = {
   chevronBottom: ChevronBottomIcon,
   copy: CopyIcon,
   ellipse: EllipseIcon,
-  arrowLeft: ArrowLeftIcon,
+  arrowLeftBtn: ArrowLeftIconBtn,
+  arrowRightBtn: ArrowRightIconBtn,
   arrowRight: ArrowRightIcon,
 } as const;
 

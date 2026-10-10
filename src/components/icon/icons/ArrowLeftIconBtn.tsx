@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export const ArrowLeftIcon = (props: SVGProps<SVGSVGElement>) => {
+export const ArrowLeftIconBtn = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="28"

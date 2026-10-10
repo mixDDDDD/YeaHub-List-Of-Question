@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-  color: var(--color-black-700);
+  color: var(--color-text-secondary);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -43,8 +43,8 @@
 }
 
 .pagination__page--active {
-  background: var(--color-purple-700);
-  color: var(--color-white-900);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
 }
 
 .pagination__ellipsis {
@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   padding: 2px 6px;
-  color: var(--color-black-700);
+  color: var(--color-text-secondary);
   font-size: 14px;
   font-weight: 500;
   line-height: 120%;
@@ -69,6 +69,6 @@
 
 .pagination__arrow:focus-visible,
 .pagination__page:focus-visible {
-  outline: 2px solid var(--color-purple-700);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }

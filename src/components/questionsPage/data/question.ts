@@ -7,6 +7,7 @@ export type QuestionSpecialization = {
 export type QuestionSkill = {
   id: number;
   title: string;
+  imageSrc?: string | null;
 };
 
 export type QuestionTopic = {

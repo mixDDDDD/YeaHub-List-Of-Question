@@ -1,6 +1,29 @@
-import type { PublicQuestionsResponse } from "@/components/questionsPage/data/question";
+import type {
+  PublicQuestionsResponse,
+  Question,
+} from "@/components/questionsPage/data/question";
 
 const API_BASE_URL = "https://api.yeatwork.ru";
+
+export const getPublicQuestion = async (
+  id: number,
+  signal?: AbortSignal,
+): Promise<Question> => {
+  const response = await fetch(
+    `${API_BASE_URL}/questions/public-questions/${id}`,
+    { signal },
+  );
+
+  if (response.status === 404) {
+    throw new Error("Вопрос не найден");
+  }
+
+  if (!response.ok) {
+    throw new Error(`Не удалось загрузить вопрос (${response.status})`);
+  }
+
+  return (await response.json()) as Question;
+};
 
 export const getPublicQuestions = async (
   page: number,

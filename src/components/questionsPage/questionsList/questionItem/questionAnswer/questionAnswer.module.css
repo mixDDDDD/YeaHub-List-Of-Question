@@ -1,6 +1,6 @@
 .question-answer {
   width: 100%;
-  color: var(--color-black-800);
+  color: var(--color-text-content);
   font-size: 16px;
   line-height: 1.5;
   overflow-wrap: anywhere;
@@ -36,9 +36,9 @@
 .question-answer code:not(pre code) {
   padding: 2px 5px;
   border-radius: 4px;
-  background: var(--color-black-25);
-  color: var(--color-green-900);
-  font-family: Consolas, "Courier New", monospace;
+  background: var(--color-code-background);
+  color: var(--color-code-text);
+  font-family: var(--font-family-code);
   font-size: 0.9em;
 }
 

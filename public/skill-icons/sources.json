@@ -1,0 +1,378 @@
+[
+  {
+    "id": 27,
+    "title": "HTML",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/737ff168-822a-4aa5-b53a-85dbef99a63b",
+    "local": "/skill-icons/27-html.png",
+    "format": "png",
+    "bytes": 4452
+  },
+  {
+    "id": 2,
+    "title": "JavaScript",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/4bc13320-d4bf-48cd-918f-32b46f7a6175",
+    "local": "/skill-icons/2-javascript.png",
+    "format": "png",
+    "bytes": 2707
+  },
+  {
+    "id": 15,
+    "title": "React Router",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/f2dbca6c-e0bb-4ee4-8736-1f5674be9dd2",
+    "local": "/skill-icons/15-react-router.png",
+    "format": "png",
+    "bytes": 4212
+  },
+  {
+    "id": 6,
+    "title": "React",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/9afe8b6d-08a5-4349-a191-c82c097924d7",
+    "local": "/skill-icons/6-react.png",
+    "format": "png",
+    "bytes": 8611
+  },
+  {
+    "id": 1,
+    "title": "Webpack",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/3c539542-ca09-4920-8ffe-7d4621e28922",
+    "local": "/skill-icons/1-webpack.png",
+    "format": "png",
+    "bytes": 7002
+  },
+  {
+    "id": 22,
+    "title": "TypeScript",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/52cc9442-98f5-4dea-a7a1-188fe42a0917",
+    "local": "/skill-icons/22-typescript.png",
+    "format": "png",
+    "bytes": 3141
+  },
+  {
+    "id": 3,
+    "title": "Redux",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/3106b101-7458-44ab-adfd-e6b3c1640818",
+    "local": "/skill-icons/3-redux.png",
+    "format": "png",
+    "bytes": 16277
+  },
+  {
+    "id": 7,
+    "title": "Git",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/0edbae0d-c4dc-48fb-ac57-661f7b291aa1",
+    "local": "/skill-icons/7-git.png",
+    "format": "png",
+    "bytes": 3646
+  },
+  {
+    "id": 39,
+    "title": "Spring",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/04458c9e-dd98-48c4-ad81-4b45b0f42139",
+    "local": "/skill-icons/39-spring.png",
+    "format": "png",
+    "bytes": 6095
+  },
+  {
+    "id": 33,
+    "title": "Python",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/865523d3-4546-4380-afe2-494313bf307d",
+    "local": "/skill-icons/33-python.png",
+    "format": "png",
+    "bytes": 23405
+  },
+  {
+    "id": 34,
+    "title": "Node.js",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/2de9aa23-253a-494d-88a6-0e8d1e06cc34",
+    "local": "/skill-icons/34-node-js.jpg",
+    "format": "jpg",
+    "bytes": 11590
+  },
+  {
+    "id": 40,
+    "title": "PHP",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/622106d7-fc91-43fc-9121-29287bbbecd8",
+    "local": "/skill-icons/40-php.png",
+    "format": "png",
+    "bytes": 19710
+  },
+  {
+    "id": 37,
+    "title": "Golang",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/450a5eb7-9486-4ed6-b549-95502d6f7a5b",
+    "local": "/skill-icons/37-golang.png",
+    "format": "png",
+    "bytes": 4295
+  },
+  {
+    "id": 38,
+    "title": "Java",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/71281b57-2c0d-4c09-abf4-4c456cdae362",
+    "local": "/skill-icons/38-java.png",
+    "format": "png",
+    "bytes": 5435
+  },
+  {
+    "id": 28,
+    "title": "CSS",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/0faababf-bd20-4666-b867-585ebf41d24e",
+    "local": "/skill-icons/28-css.png",
+    "format": "png",
+    "bytes": 4123
+  },
+  {
+    "id": 41,
+    "title": "Laravel",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/2116b5c0-ed2b-4b91-b613-afc9e2ae9a48",
+    "local": "/skill-icons/41-laravel.png",
+    "format": "png",
+    "bytes": 5305
+  },
+  {
+    "id": 36,
+    "title": "FastAPI",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/acd81fd1-90f0-4a63-a9f2-1a02bc66d6ae",
+    "local": "/skill-icons/36-fastapi.png",
+    "format": "png",
+    "bytes": 4603
+  },
+  {
+    "id": 35,
+    "title": "Nest.js",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/502e3af0-2e49-46b7-add6-959a322a1600",
+    "local": "/skill-icons/35-nest-js.png",
+    "format": "png",
+    "bytes": 5371
+  },
+  {
+    "id": 42,
+    "title": "Ruby",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/3759ff1b-bf0b-4e46-ad1b-a4ea7774f984",
+    "local": "/skill-icons/42-ruby.png",
+    "format": "png",
+    "bytes": 9158
+  },
+  {
+    "id": 44,
+    "title": "Swift ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/f9aca248-1884-467a-8b01-7a6c90ff9ffc",
+    "local": "/skill-icons/44-swift.jpg",
+    "format": "jpg",
+    "bytes": 12704
+  },
+  {
+    "id": 45,
+    "title": "Kotlin",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/4a1ba82b-43d7-4f58-b2e3-bf1cd4f8d589",
+    "local": "/skill-icons/45-kotlin.png",
+    "format": "png",
+    "bytes": 14359
+  },
+  {
+    "id": 43,
+    "title": "Rust",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/fa92d43e-c1e1-45e4-9c50-6bce9f7b0d0b",
+    "local": "/skill-icons/43-rust.png",
+    "format": "png",
+    "bytes": 7393
+  },
+  {
+    "id": 47,
+    "title": "Postgres",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/5a521abd-c600-4d98-a735-59d245d4962f",
+    "local": "/skill-icons/47-postgres.png",
+    "format": "png",
+    "bytes": 13654
+  },
+  {
+    "id": 48,
+    "title": "MongoDB",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/1b1ff0ef-cf30-44d6-a10e-6cdb232041dd",
+    "local": "/skill-icons/48-mongodb.png",
+    "format": "png",
+    "bytes": 4887
+  },
+  {
+    "id": 49,
+    "title": "Redis ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/360798bb-543f-485f-92d5-d3fdae80ef7d",
+    "local": "/skill-icons/49-redis.jpg",
+    "format": "jpg",
+    "bytes": 17454
+  },
+  {
+    "id": 51,
+    "title": "RabbitMQ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/cc2db2be-1726-4c63-8d75-bd0f5973ee76",
+    "local": "/skill-icons/51-rabbitmq.jpg",
+    "format": "jpg",
+    "bytes": 5243
+  },
+  {
+    "id": 8,
+    "title": "Docker",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/22183ebf-03d1-4a1f-bf08-461394ece7c0",
+    "local": "/skill-icons/8-docker.png",
+    "format": "png",
+    "bytes": 12058
+  },
+  {
+    "id": 53,
+    "title": "Kubernetes",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/5020ea9e-657b-4c9c-b1c3-9501d74b56e2",
+    "local": "/skill-icons/53-kubernetes.png",
+    "format": "png",
+    "bytes": 7282
+  },
+  {
+    "id": 54,
+    "title": "Bash",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/7ebeea70-990c-4b5f-afb5-1b40ddcd6a2b",
+    "local": "/skill-icons/54-bash.png",
+    "format": "png",
+    "bytes": 1903
+  },
+  {
+    "id": 55,
+    "title": "Linux",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/4702e91f-43e3-4170-bf01-ba6b76270985",
+    "local": "/skill-icons/55-linux.png",
+    "format": "png",
+    "bytes": 17047
+  },
+  {
+    "id": 12,
+    "title": "CI/CD",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/1160c41b-563a-4a26-a750-59fac0f1958b",
+    "local": "/skill-icons/12-ci-cd.png",
+    "format": "png",
+    "bytes": 17510
+  },
+  {
+    "id": 56,
+    "title": "C",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/d4a52d48-59ef-4147-916e-09cfce9015b1",
+    "local": "/skill-icons/56-c.jpg",
+    "format": "jpg",
+    "bytes": 14625
+  },
+  {
+    "id": 57,
+    "title": "C++",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/c8bd243b-be4e-4cb1-9eb1-153028e7d04a",
+    "local": "/skill-icons/57-c.png",
+    "format": "png",
+    "bytes": 4437
+  },
+  {
+    "id": 58,
+    "title": "C#",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/d07bcbea-ff8f-47c0-a635-2694b2979306",
+    "local": "/skill-icons/58-c.jpg",
+    "format": "jpg",
+    "bytes": 15469
+  },
+  {
+    "id": 59,
+    "title": ".NET",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/6ec9e25b-9c21-4429-ae47-96a2a85c3575",
+    "local": "/skill-icons/59-net.png",
+    "format": "png",
+    "bytes": 6435
+  },
+  {
+    "id": 60,
+    "title": "Unreal Engine",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/9d89da2e-86f4-4c3b-a981-b14e9f477b77",
+    "local": "/skill-icons/60-unreal-engine.png",
+    "format": "png",
+    "bytes": 9102
+  },
+  {
+    "id": 61,
+    "title": "Unity ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/a6231290-3bd3-4b12-86ea-9ee6a6d8e929",
+    "local": "/skill-icons/61-unity.png",
+    "format": "png",
+    "bytes": 4837
+  },
+  {
+    "id": 62,
+    "title": "PyTorch ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/36296692-94c4-4dc6-a557-e46c462d09ad",
+    "local": "/skill-icons/62-pytorch.jpg",
+    "format": "jpg",
+    "bytes": 15682
+  },
+  {
+    "id": 63,
+    "title": "TensorFlow ",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/f2ac95ab-f7ae-4be1-9557-792790dc1b6c",
+    "local": "/skill-icons/63-tensorflow.png",
+    "format": "png",
+    "bytes": 3649
+  },
+  {
+    "id": 67,
+    "title": "Android",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/06425306-aa4d-48af-b3ec-64ac9a0f5742",
+    "local": "/skill-icons/67-android.jpg",
+    "format": "jpg",
+    "bytes": 5775
+  },
+  {
+    "id": 68,
+    "title": "IOS",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/8be38d6b-b92c-4419-bb95-353dedc6cf3a",
+    "local": "/skill-icons/68-ios.jpg",
+    "format": "jpg",
+    "bytes": 5194
+  },
+  {
+    "id": 69,
+    "title": "Kafka",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/b015adc6-947d-41a0-a127-4afad5ea4356",
+    "local": "/skill-icons/69-kafka.png",
+    "format": "png",
+    "bytes": 4620
+  },
+  {
+    "id": 70,
+    "title": "Entity Framework",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/43cfffd1-ebdb-4126-891a-712250fbc957",
+    "local": "/skill-icons/70-entity-framework.jpg",
+    "format": "jpg",
+    "bytes": 6524
+  },
+  {
+    "id": 71,
+    "title": "Math",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/197d5678-9d8d-4225-a1ee-149690da82dc",
+    "local": "/skill-icons/71-math.png",
+    "format": "png",
+    "bytes": 26279
+  },
+  {
+    "id": 72,
+    "title": "Selenium",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/c56f3531-5075-4913-91bf-017d8feecb7f",
+    "local": "/skill-icons/72-selenium.png",
+    "format": "png",
+    "bytes": 15305
+  },
+  {
+    "id": 73,
+    "title": "Django",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/875eac5d-df29-4906-a05a-c616c6fef653",
+    "local": "/skill-icons/73-django.png",
+    "format": "png",
+    "bytes": 4843
+  },
+  {
+    "id": 79,
+    "title": "Next.js",
+    "source": "https://e5e684b1-4a6a-4be5-b7ee-b2b678239d61.selstorage.ru/skill/81cec570-7e5c-45e8-bef0-e3de531e79e4",
+    "local": "/skill-icons/79-next-js.jpg",
+    "format": "jpg",
+    "bytes": 5560
+  }
+]

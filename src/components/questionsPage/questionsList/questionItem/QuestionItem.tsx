@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { Icon } from "@/components/icon/Icon";
 import type { Question } from "@/components/questionsPage/data/question";
 import styles from "./questionItem.module.css";
-import { QuestionDetails } from "@/components/questionsPage/questionsList/questionItem/QuestionDetails";
+import { QuestionDetails } from "@/components/questionsPage/questionsList/questionItem/questionDetails/QuestionDetails";
 
 type QuestionItemProps = {
   question: Question;
@@ -18,7 +18,12 @@ export const QuestionItem = ({ question }: QuestionItemProps) => {
   };
 
   return (
-    <li className={clsx(styles["question-item"], isOpen && styles["question-item--open"])}>
+    <li
+      className={clsx(
+        styles["question-item"],
+        isOpen && styles["question-item--open"],
+      )}
+    >
       <button
         type="button"
         className={styles["question-item__trigger"]}

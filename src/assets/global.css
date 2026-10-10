@@ -1,22 +1,44 @@
 @import "./variables.css";
 @import "./fonts/fonts.css";
 
-html {
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
 body {
-  min-width: 1280px;
+  min-width: 320px;
   font-family: var(--font-family-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote,
+pre,
+hr {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
 }
 
 a {
@@ -24,19 +46,21 @@ a {
   color: inherit;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
 button,
 input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
   border: none;
   background: none;
-  outline: none;
+}
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 img {

@@ -3,5 +3,21 @@
   grid-template-columns: minmax(0, 1fr) 392px;
   gap: 20px;
   max-width: 1216px;
+  width: calc(100% - 64px);
   margin: 40px auto 0;
+}
+
+@media (max-width: 1024px) {
+  .questions-page {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 60px);
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .questions-page {
+    width: calc(100% - 20px);
+    margin-top: 16px;
+  }
 }

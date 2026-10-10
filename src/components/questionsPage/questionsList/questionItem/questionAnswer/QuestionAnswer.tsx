@@ -2,7 +2,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
-import { QuestionCodeBlock } from "./QuestionCodeBlock";
+import { QuestionCodeBlock } from "./questionCodeBlock/QuestionCodeBlock";
 import {
   asCodeFence,
   highlightComponentNames,
@@ -24,10 +24,22 @@ export const QuestionAnswer = ({ answer, code }: QuestionAnswerProps) => (
         rehypeRaw,
         normalizeCodeBlocks,
         rehypeSanitize,
-        [rehypeHighlight, {
-          detect: true,
-          subset: ["javascript", "typescript", "xml", "css", "json", "python", "bash", "sql"],
-        }],
+        [
+          rehypeHighlight,
+          {
+            detect: true,
+            subset: [
+              "javascript",
+              "typescript",
+              "xml",
+              "css",
+              "json",
+              "python",
+              "bash",
+              "sql",
+            ],
+          },
+        ],
         highlightComponentNames,
       ]}
     >

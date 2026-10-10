@@ -22,11 +22,11 @@
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  background: var(--color-black-10);
+  background: var(--color-surface-muted);
 }
 
 .question-details__meta-label {
-  color: var(--color-black-800);
+  color: var(--color-text-content);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -40,11 +40,33 @@
   align-items: center;
   gap: 10px;
   border-radius: 4px;
-  background: var(--color-purple-700);
-  color: var(--color-white-900);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
 }
 
+.question-detail__full-answer {
+  align-self: flex-end;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.question-item__full-answer:hover {
+  text-decoration: underline;
+}
+
+.question-item__full-answer:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}

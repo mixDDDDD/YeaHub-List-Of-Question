@@ -2,5 +2,6 @@ export { LogoIcon } from "@/components/icon/icons/LogoIcon";
 export { ChevronBottomIcon } from '@/components/icon/icons/ChevronBottomIcon';
 export { EllipseIcon } from '@/components/icon/icons/EllipseIcon';
 export { CopyIcon } from '@/components/icon/icons/CopyIcon';
-export { ArrowLeftIcon } from '@/components/icon/icons/ArrowLeftIcon';
+export { ArrowLeftIconBtn } from '@/components/icon/icons/ArrowLeftIconBtn';
+export { ArrowRightIconBtn } from '@/components/icon/icons/ArrowRightIconBtn';
 export { ArrowRightIcon } from '@/components/icon/icons/ArrowRightIcon';

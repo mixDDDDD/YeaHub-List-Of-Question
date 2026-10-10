@@ -4,6 +4,7 @@ import styles from "./questionsList.module.css";
 import { Pagination } from "@/components/questionsPage/questionsList/pagination/Pagination";
 
 type QuestionsListProps = {
+  title?: string;
   questions: Question[];
   isLoading: boolean;
   error: string | null;
@@ -14,6 +15,7 @@ type QuestionsListProps = {
 };
 
 export const QuestionsList = ({
+  title = "Вопросы",
   questions,
   isLoading,
   error,
@@ -26,7 +28,7 @@ export const QuestionsList = ({
     <div className={styles["questions-list"]}>
       <div className={styles["questions-list__content"]} aria-busy={isLoading}>
         <h1 className={styles["questions-list__title"]}>
-          Вопросы React, JavaScript
+          {title}
         </h1>
         {isLoading && questions.length === 0 ? (
           <p className={styles["questions-list__message"]} role="status">

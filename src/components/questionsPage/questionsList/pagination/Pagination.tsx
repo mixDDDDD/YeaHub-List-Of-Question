@@ -20,7 +20,8 @@ export const Pagination = ({
   const visiblePages = getPaginationPages(page, totalPages);
 
   const handlePageChange = (nextPage: number) => {
-    if (disabled || nextPage === page || nextPage < 1 || nextPage > totalPages) return;
+    if (disabled || nextPage === page || nextPage < 1 || nextPage > totalPages)
+      return;
     onPageChange(nextPage);
   };
 
@@ -33,7 +34,7 @@ export const Pagination = ({
         disabled={disabled || page <= 1}
         onClick={() => handlePageChange(page - 1)}
       >
-        <Icon name="arrowLeft" aria-hidden="true" />
+        <Icon name="arrowLeftBtn" aria-hidden="true" />
       </button>
 
       <ul className={styles["pagination__pages"]}>
@@ -53,7 +54,10 @@ export const Pagination = ({
                 {pageNumber}
               </button>
             ) : (
-              <span className={styles["pagination__ellipsis"]} aria-hidden="true">
+              <span
+                className={styles["pagination__ellipsis"]}
+                aria-hidden="true"
+              >
                 ⋯
               </span>
             )}
@@ -68,7 +72,7 @@ export const Pagination = ({
         disabled={disabled || page >= totalPages}
         onClick={() => handlePageChange(page + 1)}
       >
-        <Icon name="arrowRight" aria-hidden="true" />
+        <Icon name="arrowRightBtn" aria-hidden="true" />
       </button>
     </nav>
   );
