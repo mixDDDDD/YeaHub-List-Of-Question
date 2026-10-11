@@ -7,6 +7,7 @@ import {
   asCodeFence,
   highlightComponentNames,
   normalizeCodeBlocks,
+  normalizeParagraphs,
   protectHtmlCodeBlocks,
 } from "./answerMarkup";
 import styles from "./questionAnswer.module.css";
@@ -24,6 +25,7 @@ export const QuestionAnswer = ({ answer, code }: QuestionAnswerProps) => (
         rehypeRaw,
         normalizeCodeBlocks,
         rehypeSanitize,
+        normalizeParagraphs,
         [
           rehypeHighlight,
           {

@@ -1,4 +1,4 @@
-import type { Element, Root, RootContent } from "hast";
+import type { Element, ElementContent, Root, RootContent } from "hast";
 
 const visitElements = (node: Root | RootContent, callback: (element: Element) => void): void => {
   if (node.type === "element") callback(node);
@@ -9,6 +9,38 @@ const readText = (node: RootContent): string => {
   if (node.type === "text") return node.value;
   if (node.type === "element" && node.tagName === "br") return "\n";
   return "children" in node ? node.children.map(readText).join("") : "";
+};
+
+export const normalizeParagraphs = () => (tree: Root): void => {
+  const blockTags = new Set([
+    "p", "div", "pre", "blockquote", "ul", "ol", "table", "hr",
+    "h1", "h2", "h3", "h4", "h5", "h6",
+  ]);
+
+  const normalize = (node: Root | Element): void => {
+    node.children.forEach((child) => {
+      if (child.type === "element") normalize(child);
+    });
+    node.children = node.children.flatMap((child) => {
+      if (child.type !== "element" || child.tagName !== "p") return [child];
+      const result: RootContent[] = [];
+      let inline: ElementContent[] = [];
+      const flush = () => {
+        if (inline.length > 0) result.push({ ...child, children: inline });
+        inline = [];
+      };
+      child.children.forEach((content) => {
+        if (content.type === "element" && blockTags.has(content.tagName)) {
+          flush();
+          result.push(content);
+        } else inline.push(content);
+      });
+      flush();
+      return result;
+    });
+  };
+
+  normalize(tree);
 };
 
 const inferLanguage = (code: string): string | undefined => {
