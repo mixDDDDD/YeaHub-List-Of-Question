@@ -57,6 +57,8 @@
   --color-focus: var(--color-purple-700);
   --color-focus-strong: var(--color-purple-900);
   --color-focus-inverse: var(--color-white-900);
+  --color-footer-background: #18003e;
+  --color-footer-text-muted: #8c8c8c;
 
   --color-code-background: var(--color-black-25);
   --color-code-text: var(--color-green-900);

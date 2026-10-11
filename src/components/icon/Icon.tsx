@@ -7,10 +7,12 @@ import {
   CopyIcon,
   EllipseIcon,
   LogoIcon,
+  FooterLogoIcon,
 } from "@/components/icon/icons";
 
 const iconMap = {
   logo: LogoIcon,
+  footerLogo: FooterLogoIcon,
   chevronBottom: ChevronBottomIcon,
   copy: CopyIcon,
   ellipse: EllipseIcon,
