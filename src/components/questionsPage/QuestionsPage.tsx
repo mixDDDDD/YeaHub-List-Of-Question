@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react";
-import { getPublicQuestions } from "@/api/questions";
+import { useQuestions } from "./hooks/useQuestions";
 import { QuestionsList } from "./questionsList/QuestionsList";
 import { QuestionsPanel } from "./questionsPanel/QuestionsPanel";
 import styles from "./questionsPage.module.css";
-import type { Question, QuestionSkill } from "./data/question";
-import { frontendSkills } from "./data/skills";
 import { specializations } from "./data/specializations";
-import { getSkills } from "@/api/skills";
+import { useSkills } from "./hooks/useSkills";
 
 export const QuestionsPage = () => {
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [retryCount, setRetryCount] = useState(0);
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
   const limit = 10;
   const [selectedSkillIds, setSelectedSkillIds] = useState<number[]>([]);
   const [selectedSpecializationId, setSelectedSpecializationId] = useState<number | null>(null);
-  const [skills, setSkills] = useState<QuestionSkill[]>(frontendSkills);
-  const [isSkillsLoading, setIsSkillsLoading] = useState(false);
-  const [skillsError, setSkillsError] = useState<string | null>(null);
-  const [skillsRetryCount, setSkillsRetryCount] = useState(0);
   const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [complexity, setComplexity] = useState<number[]>([]);
   const [rating, setRating] = useState<number[]>([]);
+  const { questions, total, isLoading, error, retryQuestions } = useQuestions({
+    page,
+    limit,
+    specializationId: selectedSpecializationId,
+    skillIds: selectedSkillIds,
+    search: searchQuery,
+    complexity,
+    rate: rating,
+  });
+  const { skills, isSkillsLoading, skillsError, retrySkills } = useSkills(selectedSpecializationId);
 
   useEffect(() => {
     if (searchInput.trim() === searchQuery) return;
@@ -57,26 +56,6 @@ export const QuestionsPage = () => {
     setPage(1);
   };
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const loadSkills = async () => {
-      setIsSkillsLoading(true);
-      setSkillsError(null);
-      try {
-        const nextSkills = selectedSpecializationId === null
-          ? frontendSkills
-          : await getSkills(selectedSpecializationId, controller.signal);
-        if (!controller.signal.aborted) setSkills(nextSkills);
-      } catch {
-        if (!controller.signal.aborted) setSkillsError("Не удалось загрузить навыки");
-      } finally {
-        if (!controller.signal.aborted) setIsSkillsLoading(false);
-      }
-    };
-    void loadSkills();
-    return () => controller.abort();
-  }, [selectedSpecializationId, skillsRetryCount]);
-
   const handleSkillChange = (id: number) => {
     setPage(1);
     setSelectedSkillIds((currentIds) =>
@@ -85,49 +64,6 @@ export const QuestionsPage = () => {
         : [...currentIds, id],
     );
   };
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadQuestions = async () => {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const response = await getPublicQuestions(
-          page,
-          limit,
-          controller.signal,
-          {
-            specializationId: selectedSpecializationId,
-            skillIds: selectedSkillIds,
-            search: searchQuery,
-            complexity,
-            rate: rating,
-          },
-        );
-        if (controller.signal.aborted) return;
-        setQuestions(response.data);
-        setTotal(response.total ?? 0);
-      } catch (requestError) {
-        if (controller.signal.aborted) return;
-
-        setError(
-          requestError instanceof TypeError
-            ? "Не удалось загрузить вопросы. Проверьте подключение и повторите попытку."
-            : requestError instanceof Error
-              ? requestError.message
-              : "Не удалось загрузить вопросы",
-        );
-      } finally {
-        if (!controller.signal.aborted) setIsLoading(false);
-      }
-    };
-
-    void loadQuestions();
-
-    return () => controller.abort();
-  }, [page, retryCount, selectedSpecializationId, selectedSkillIds, searchQuery, complexity, rating]);
 
   const totalPages = Math.ceil(total / limit);
   const selectedSpecialization = specializations.find((item) => item.id === selectedSpecializationId);
@@ -142,7 +78,7 @@ export const QuestionsPage = () => {
         questions={questions}
         isLoading={isLoading}
         error={error}
-        onRetry={() => setRetryCount((count) => count + 1)}
+        onRetry={retryQuestions}
         page={page}
         totalPages={totalPages}
         onPageChange={setPage}
@@ -159,7 +95,7 @@ export const QuestionsPage = () => {
         skills={skills}
         isSkillsLoading={isSkillsLoading}
         skillsError={skillsError}
-        onSkillsRetry={() => setSkillsRetryCount((count) => count + 1)}
+        onSkillsRetry={retrySkills}
         selectedSkillIds={selectedSkillIds}
         onSkillChange={handleSkillChange}
       />

@@ -4,7 +4,7 @@ import type {
 } from "@/components/questionsPage/data/question";
 import { API_BASE_URL } from "./config";
 
-type QuestionFilters = {
+export type QuestionFilters = {
   specializationId: number | null;
   skillIds: number[];
   search: string;

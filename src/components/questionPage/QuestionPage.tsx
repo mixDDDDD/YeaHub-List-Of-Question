@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { getPublicQuestion } from "@/api/questions";
+import { useEffect } from "react";
+import { useQuestion } from "./hooks/useQuestion";
 import { Icon } from "@/components/icon/Icon";
-import type { Question } from "@/components/questionsPage/data/question";
 import { QuestionPageHeader } from "./questionPageHeader/QuestionPageHeader";
 import { QuestionPageMeta } from "./questionPageMeta/QuestionPageMeta";
 import { QuestionAnswerSection } from "./questionAnswerSection/QuestionAnswerSection";
@@ -12,38 +11,7 @@ type QuestionPageProps = {
 };
 
 export const QuestionPage = ({ questionId }: QuestionPageProps) => {
-  const [question, setQuestion] = useState<Question | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [retryCount, setRetryCount] = useState(0);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadQuestion = async () => {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const data = await getPublicQuestion(questionId, controller.signal);
-        if (!controller.signal.aborted) setQuestion(data);
-      } catch (requestError) {
-        if (controller.signal.aborted) return;
-        setError(
-          requestError instanceof TypeError
-            ? "Не удалось загрузить вопрос. Проверьте подключение и повторите попытку."
-            : requestError instanceof Error
-              ? requestError.message
-              : "Не удалось загрузить вопрос",
-        );
-      } finally {
-        if (!controller.signal.aborted) setIsLoading(false);
-      }
-    };
-
-    void loadQuestion();
-    return () => controller.abort();
-  }, [questionId, retryCount]);
+  const { question, isLoading, error, retry } = useQuestion(questionId);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -65,7 +33,7 @@ export const QuestionPage = ({ questionId }: QuestionPageProps) => {
           <button
             type="button"
             className={styles.retry}
-            onClick={() => setRetryCount((count) => count + 1)}
+            onClick={retry}
           >
             Повторить
           </button>
