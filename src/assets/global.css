@@ -2,7 +2,7 @@
 @import "./fonts/fonts.css";
 
 body {
-  min-width: 320px;
+  min-width: 0;
   font-family: var(--font-family-primary);
   font-size: 16px;
   line-height: 1.5;
@@ -35,8 +35,7 @@ hr {
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+:where(ul[class], ol[class]) {
   padding: 0;
   list-style: none;
 }

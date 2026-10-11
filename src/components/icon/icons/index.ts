@@ -6,3 +6,6 @@ export { CopyIcon } from '@/components/icon/icons/CopyIcon';
 export { ArrowLeftIconBtn } from '@/components/icon/icons/ArrowLeftIconBtn';
 export { ArrowRightIconBtn } from '@/components/icon/icons/ArrowRightIconBtn';
 export { ArrowRightIcon } from '@/components/icon/icons/ArrowRightIcon';
+export { HamburgerMenuIcon } from "@/components/icon/icons/HamburgerMenuIcon";
+export { FilterIcon } from "@/components/icon/icons/FilterIcon";
+export { CloseButtonIcon } from "@/components/icon/icons/CloseButtonIcon";

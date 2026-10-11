@@ -6,6 +6,9 @@ import {
   ChevronBottomIcon,
   CopyIcon,
   EllipseIcon,
+  FilterIcon,
+  CloseButtonIcon,
+  HamburgerMenuIcon,
   LogoIcon,
   FooterLogoIcon,
 } from "@/components/icon/icons";
@@ -19,6 +22,9 @@ const iconMap = {
   arrowLeftBtn: ArrowLeftIconBtn,
   arrowRightBtn: ArrowRightIconBtn,
   arrowRight: ArrowRightIcon,
+  hamburgerMenu: HamburgerMenuIcon,
+  filter: FilterIcon,
+  closeButton: CloseButtonIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;
