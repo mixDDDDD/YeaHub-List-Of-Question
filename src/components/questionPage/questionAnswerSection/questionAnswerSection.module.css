@@ -20,9 +20,9 @@
   color: var(--color-text-muted);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .section {
-    padding: 20px 16px;
+    padding: 20px 10px;
     gap: 16px;
     border-radius: var(--radius-control);
   }

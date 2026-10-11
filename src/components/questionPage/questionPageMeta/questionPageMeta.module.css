@@ -55,6 +55,8 @@
 }
 
 .skill {
+  max-width: 100%;
+  overflow-wrap: anywhere;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -67,6 +69,7 @@
 }
 
 .skill img {
+  flex-shrink: 0;
   object-fit: contain;
 }
 
@@ -76,9 +79,16 @@
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .meta {
-    padding: 20px 16px;
-    border-radius: var(--radius-control);
+    border-radius: 0;
+    box-shadow: none;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .meta {
+    padding: 0 10px 20px;
   }
 }
