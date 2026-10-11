@@ -2,6 +2,7 @@ import type { Question } from "@/components/questionsPage/data/question";
 import { QuestionItem } from "./questionItem/QuestionItem";
 import styles from "./questionsList.module.css";
 import { Pagination } from "@/components/questionsPage/questionsList/pagination/Pagination";
+import { useLayoutEffect, useRef } from "react";
 
 type QuestionsListProps = {
   title?: string;
@@ -24,6 +25,21 @@ export const QuestionsList = ({
   onPageChange,
   onRetry,
 }: QuestionsListProps) => {
+  const paginationRef = useRef<HTMLDivElement>(null);
+  const paginationTop = useRef<number | null>(null);
+
+  const handlePageChange = (nextPage: number) => {
+    paginationTop.current = paginationRef.current?.getBoundingClientRect().top ?? null;
+    onPageChange(nextPage);
+  };
+
+  useLayoutEffect(() => {
+    if (isLoading || paginationTop.current === null || !paginationRef.current) return;
+    const difference = paginationRef.current.getBoundingClientRect().top - paginationTop.current;
+    window.scrollBy({ top: difference, behavior: "instant" });
+    paginationTop.current = null;
+  }, [questions, isLoading, error]);
+
   return (
     <div className={styles["questions-list"]}>
       <div className={styles["questions-list__content"]} aria-busy={isLoading}>
@@ -57,12 +73,14 @@ export const QuestionsList = ({
           </ul>
         )}
       </div>
-      <Pagination
-        page={page}
-        totalPages={totalPages}
-        onPageChange={onPageChange}
-        disabled={isLoading || Boolean(error)}
-      />
+      <div ref={paginationRef}>
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+          disabled={isLoading || Boolean(error)}
+        />
+      </div>
     </div>
   );
 };

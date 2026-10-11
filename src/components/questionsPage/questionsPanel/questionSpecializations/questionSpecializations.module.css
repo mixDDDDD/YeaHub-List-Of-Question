@@ -1,0 +1,63 @@
+.specializations {
+  min-width: 0;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expanded {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  max-height: 500px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding: 4px;
+}
+
+.expanded .option {
+  flex-shrink: 0;
+}
+
+.option {
+  max-width: 100%;
+  min-height: 42px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text-content);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.option[aria-pressed="true"] {
+  border-color: var(--color-primary);
+}
+
+.more {
+  margin-top: 8px;
+  color: var(--color-primary);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.more:hover {
+  text-decoration: underline;
+}

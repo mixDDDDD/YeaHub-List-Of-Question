@@ -62,11 +62,11 @@
   cursor: pointer;
 }
 
-.question-item__full-answer:hover {
+.question-detail__full-answer:hover {
   text-decoration: underline;
 }
 
-.question-item__full-answer:focus-visible {
+.question-detail__full-answer:focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 4px;
 }

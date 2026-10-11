@@ -24,6 +24,11 @@ npm run dev   # http://localhost:3000
 
 ## Соглашения
 
+Запросы к API идут через `/api`. В dev-сервере и `npm run preview` Vite
+перенаправляет их на `https://api.yeahub.ru`. При публикации статической сборки
+на хостинге нужно настроить такое же перенаправление `/api/*` на API YeaHub,
+удаляя префикс `/api` из пути.
+
 - Импорты через алиас `@` → `src`: `import App from '@/App'`
 - Цвета — в CSS-переменных `src/assets/variables.css`
 - Шрифт Manrope подключён локально в `src/assets/fonts/`
