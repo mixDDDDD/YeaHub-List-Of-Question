@@ -6,12 +6,26 @@
   gap: 32px;
 }
 
-.logo:focus:not(:focus-visible) {
-  outline: none;
+@media (max-width: 1024px) {
+  .logo {
+    width: 144px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 33px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .logo svg {
+    flex-shrink: 0;
+  }
 }
 
 .logo:focus-visible {
   border-radius: 4px;
-  outline: 2px solid var(--color-purple-700);
+  outline: 2px solid var(--color-focus);
   outline-offset: 4px;
 }
