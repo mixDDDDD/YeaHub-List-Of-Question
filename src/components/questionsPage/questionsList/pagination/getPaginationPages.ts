@@ -1,7 +1,14 @@
 type PaginationItem = number | "ellipsis-start" | "ellipsis-end";
 
-export const getPaginationPages = (page: number, totalPages: number): PaginationItem[] => {
+export const getPaginationPages = (page: number, totalPages: number, compact = false): PaginationItem[] => {
   if (totalPages <= 0) return [];
+
+  if (compact && totalPages > 5) {
+    if (page <= 3) return [1, 2, 3, "ellipsis-end", totalPages];
+    if (page >= totalPages - 2)
+      return [1, "ellipsis-start", totalPages - 2, totalPages - 1, totalPages];
+    return [1, "ellipsis-start", page, "ellipsis-end", totalPages];
+  }
 
   if (totalPages <= 8) {
     return Array.from({ length: totalPages }, (_, index) => index + 1);

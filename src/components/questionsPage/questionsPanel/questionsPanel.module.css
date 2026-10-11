@@ -10,14 +10,9 @@
   box-shadow: var(--shadow-card);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .panel {
     padding: 16px;
     border-radius: var(--radius-control);
-  }
-}
-@media (max-width: 1024px) {
-  .panel {
-    grid-row: 1;
   }
 }

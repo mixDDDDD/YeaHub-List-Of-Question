@@ -70,3 +70,19 @@
   outline: 2px solid var(--color-focus);
   outline-offset: 4px;
 }
+
+@media (max-width: 767px) {
+  .question-details {
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .question-details__meta {
+    gap: 8px 16px;
+  }
+
+  .question-details__meta-label,
+  .question-details__meta-value {
+    font-size: 12px;
+  }
+}

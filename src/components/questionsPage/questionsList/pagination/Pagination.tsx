@@ -1,6 +1,15 @@
 import { Icon } from "@/components/icon/Icon";
 import { getPaginationPages } from "./getPaginationPages";
 import styles from "./pagination.module.css";
+import { useSyncExternalStore } from "react";
+
+const subscribeToMobile = (onChange: () => void) => {
+  const media = window.matchMedia("(max-width: 767px)");
+  media.addEventListener("change", onChange);
+  return () => media.removeEventListener("change", onChange);
+};
+
+const getMobileSnapshot = () => window.matchMedia("(max-width: 767px)").matches;
 
 type PaginationProps = {
   page: number;
@@ -15,9 +24,10 @@ export const Pagination = ({
   onPageChange,
   disabled = false,
 }: PaginationProps) => {
+  const isMobile = useSyncExternalStore(subscribeToMobile, getMobileSnapshot);
   if (totalPages <= 1) return null;
 
-  const visiblePages = getPaginationPages(page, totalPages);
+  const visiblePages = getPaginationPages(page, totalPages, isMobile && totalPages >= 100);
 
   const handlePageChange = (nextPage: number) => {
     if (disabled || nextPage === page || nextPage < 1 || nextPage > totalPages)

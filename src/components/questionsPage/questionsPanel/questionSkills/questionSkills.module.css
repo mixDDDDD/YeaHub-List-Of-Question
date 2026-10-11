@@ -18,6 +18,8 @@
 }
 
 .skill {
+  max-width: 100%;
+  overflow-wrap: anywhere;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -55,6 +57,7 @@
   border-color: var(--color-primary);
 }
 .more {
+  border-radius: 4px;
   align-self: flex-start;
   color: var(--color-primary);
   font-size: 14px;
