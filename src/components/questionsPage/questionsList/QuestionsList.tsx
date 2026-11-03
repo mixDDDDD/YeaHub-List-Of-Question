@@ -54,7 +54,7 @@ export const QuestionsList = ({
 
   return (
     <div className={styles["questions-list"]}>
-      <div className={styles["questions-list__content"]} aria-busy={isLoading}>
+      <div className={styles["questions-list__content"]}>
         <div className={styles["questions-list__header"]}>
           <h1 className={styles["questions-list__title"]}>{title}</h1>
           <button
@@ -69,6 +69,11 @@ export const QuestionsList = ({
             <Icon name={isFiltersOpen ? "closeButton" : "filter"} aria-hidden="true" />
           </button>
         </div>
+        {isLoading && questions.length > 0 && (
+          <p className={styles["questions-list__message"]} role="status">
+            Обновляем вопросы…
+          </p>
+        )}
         {isLoading && questions.length === 0 ? (
           <p className={styles["questions-list__message"]} role="status">
             Загружаем вопросы…
@@ -89,7 +94,11 @@ export const QuestionsList = ({
             Вопросы не найдены
           </p>
         ) : (
-          <ul className={styles["questions-list__items"]}>
+          <ul
+            className={styles["questions-list__items"]}
+            aria-busy={isLoading}
+            inert={isLoading}
+          >
             {questions.map((question) => (
               <QuestionItem key={question.id} question={question} />
             ))}

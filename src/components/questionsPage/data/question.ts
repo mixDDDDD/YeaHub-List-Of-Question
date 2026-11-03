@@ -39,3 +39,5 @@ export type PublicQuestionsResponse = {
   page?: number;
   limit?: number;
 };
+
+export type QuestionSpecializationOption = Pick<QuestionSpecialization, "id" | "title">;

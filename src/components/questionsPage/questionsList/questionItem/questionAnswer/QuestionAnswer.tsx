@@ -2,13 +2,13 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
+import { normalizeAnswerHtml } from "./normalizeAnswerHtml";
 import { QuestionCodeBlock } from "./questionCodeBlock/QuestionCodeBlock";
 import {
   asCodeFence,
   highlightComponentNames,
   normalizeCodeBlocks,
   normalizeParagraphs,
-  protectHtmlCodeBlocks,
 } from "./answerMarkup";
 import styles from "./questionAnswer.module.css";
 
@@ -20,6 +20,7 @@ type QuestionAnswerProps = {
 export const QuestionAnswer = ({ answer, code }: QuestionAnswerProps) => (
   <div className={styles["question-answer"]}>
     <Markdown
+      remarkPlugins={[normalizeAnswerHtml]}
       components={{ pre: QuestionCodeBlock }}
       rehypePlugins={[
         rehypeRaw,
@@ -45,7 +46,7 @@ export const QuestionAnswer = ({ answer, code }: QuestionAnswerProps) => (
         highlightComponentNames,
       ]}
     >
-      {`${code ? asCodeFence(code) : ""}${protectHtmlCodeBlocks(answer)}`}
+      {`${code ? asCodeFence(code) : ""}${answer}`}
     </Markdown>
   </div>
 );
