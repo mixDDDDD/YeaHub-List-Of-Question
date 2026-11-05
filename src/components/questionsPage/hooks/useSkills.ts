@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { getSkills } from "@/api/skills";
 import type { QuestionSkill } from "@/components/questionsPage/data/question";
-import { frontendSkills } from "@/components/questionsPage/data/skills";
 
 export const useSkills = (selectedSpecializationId: number | null) => {
-  const [skills, setSkills] = useState<QuestionSkill[]>(frontendSkills);
-  const [isSkillsLoading, setIsSkillsLoading] = useState(false);
+  const [skills, setSkills] = useState<QuestionSkill[]>([]);
+  const [isSkillsLoading, setIsSkillsLoading] = useState(true);
   const [skillsError, setSkillsError] = useState<string | null>(null);
   const [skillsRetryCount, setSkillsRetryCount] = useState(0);
 
@@ -16,9 +15,7 @@ export const useSkills = (selectedSpecializationId: number | null) => {
       setSkillsError(null);
       try {
         const nextSkills =
-          selectedSpecializationId === null
-            ? frontendSkills
-            : await getSkills(selectedSpecializationId, controller.signal);
+          await getSkills(selectedSpecializationId, controller.signal);
         if (!controller.signal.aborted) setSkills(nextSkills);
       } catch {
         if (!controller.signal.aborted)

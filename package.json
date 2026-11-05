@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "node --test --test-isolation=none src/api/catalog.test.mjs src/components/questionsPage/questionsList/questionItem/questionAnswer/answerMarkup.test.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

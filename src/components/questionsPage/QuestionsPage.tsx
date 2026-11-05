@@ -5,7 +5,7 @@ import { useQuestions } from "./hooks/useQuestions";
 import { QuestionsList } from "./questionsList/QuestionsList";
 import { QuestionsPanel } from "./questionsPanel/QuestionsPanel";
 import styles from "./questionsPage.module.css";
-import { specializations } from "./data/specializations";
+import { useSpecializations } from "./hooks/useSpecializations";
 import { useSkills } from "./hooks/useSkills";
 
 export const QuestionsPage = () => {
@@ -31,6 +31,7 @@ export const QuestionsPage = () => {
   });
   const { skills, isSkillsLoading, skillsError, retrySkills } = useSkills(selectedSpecializationId);
 
+  const { specializations, isSpecializationsLoading, specializationsError, retrySpecializations } = useSpecializations();
   const filtersId = useId();
   const filtersRef = useRef<HTMLDivElement>(null);
   const filtersButtonRef = useRef<HTMLButtonElement>(null);
@@ -114,6 +115,10 @@ export const QuestionsPage = () => {
         className={`${styles["questions-page__filters"]} ${isFiltersOpen ? styles["questions-page__filters--open"] : ""}`}
       >
         <QuestionsPanel
+          specializations={specializations}
+          isSpecializationsLoading={isSpecializationsLoading}
+          specializationsError={specializationsError}
+          onSpecializationsRetry={retrySpecializations}
           search={searchInput}
           onSearchChange={setSearchInput}
           complexity={complexity}

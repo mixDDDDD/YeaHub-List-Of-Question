@@ -1,4 +1,4 @@
-import type { QuestionSkill } from "@/components/questionsPage/data/question";
+import type { QuestionSkill, QuestionSpecializationOption } from "@/components/questionsPage/data/question";
 import { QuestionSkills } from "@/components/questionsPage/questionsPanel/questionSkills/QuestionSkills";
 import { QuestionSpecializations } from "./questionSpecializations/QuestionSpecializations";
 import styles from "./questionsPanel.module.css";
@@ -7,6 +7,10 @@ import { QuestionComplexity } from "./questionComplexity/QuestionComplexity";
 import { QuestionRating } from "./questionRating/QuestionRating";
 
 type QuestionsPanelProps = {
+  specializations: QuestionSpecializationOption[];
+  isSpecializationsLoading: boolean;
+  specializationsError: string | null;
+  onSpecializationsRetry: () => void;
   search: string;
   onSearchChange: (value: string) => void;
   complexity: number[];
@@ -24,6 +28,10 @@ type QuestionsPanelProps = {
 };
 
 export const QuestionsPanel = ({
+  specializations,
+  isSpecializationsLoading,
+  specializationsError,
+  onSpecializationsRetry,
   search,
   onSearchChange,
   complexity,
@@ -43,6 +51,10 @@ export const QuestionsPanel = ({
     <aside className={styles.panel} aria-label="Фильтры вопросов">
       <QuestionSearch value={search} onChange={onSearchChange} />
       <QuestionSpecializations
+        specializations={specializations}
+        isLoading={isSpecializationsLoading}
+        error={specializationsError}
+        onRetry={onSpecializationsRetry}
         selectedSpecializationId={selectedSpecializationId}
         onSpecializationChange={onSpecializationChange}
       />
@@ -55,6 +67,8 @@ export const QuestionsPanel = ({
             Повторить
           </button>
         </div>
+      ) : skills.length === 0 ? (
+        <p>Навыки не найдены</p>
       ) : (
         <QuestionSkills
           selectedSkillIds={selectedSkillIds}

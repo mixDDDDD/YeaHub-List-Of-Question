@@ -1,13 +1,21 @@
 import { useId, useState } from "react";
-import { specializations } from "@/components/questionsPage/data/specializations";
+import type { QuestionSpecializationOption } from "@/components/questionsPage/data/question";
 import styles from "./questionSpecializations.module.css";
 
 type QuestionSpecializationsProps = {
+  specializations: QuestionSpecializationOption[];
+  isLoading: boolean;
+  error: string | null;
+  onRetry: () => void;
   selectedSpecializationId: number | null;
   onSpecializationChange: (id: number) => void;
 };
 
 export const QuestionSpecializations = ({
+  specializations,
+  isLoading,
+  error,
+  onRetry,
   selectedSpecializationId,
   onSpecializationChange,
 }: QuestionSpecializationsProps) => {
@@ -30,7 +38,16 @@ export const QuestionSpecializations = ({
   return (
     <section className={styles.specializations} aria-label="Специализация">
       <h2 className={styles.title}>Специализация</h2>
-      <div
+      {isLoading ? (
+        <p role="status">Загружаем специализации…</p>
+      ) : error ? (
+        <div role="alert">
+          <p>{error}</p>
+          <button type="button" onClick={onRetry}>Повторить</button>
+        </div>
+      ) : specializations.length === 0 ? (
+        <p>Специализации не найдены</p>
+      ) : <div
         id={listId}
         className={`${styles.list} ${isExpanded ? styles.expanded : ""}`}
       >
@@ -45,8 +62,8 @@ export const QuestionSpecializations = ({
             {item.title}
           </button>
         ))}
-      </div>
-      <button
+      </div>}
+      {!isLoading && !error && specializations.length > 5 && <button
         type="button"
         className={styles.more}
         aria-expanded={isExpanded}
@@ -54,7 +71,7 @@ export const QuestionSpecializations = ({
         onClick={() => setIsExpanded((current) => !current)}
       >
         {isExpanded ? "Скрыть" : "Посмотреть все"}
-      </button>
+      </button>}
     </section>
   );
 };
